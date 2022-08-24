@@ -4,6 +4,7 @@ $SITE_ROOT: '';
 // 色
 $c_primary: #345017;
 $c_primary_dark: #233610;
+$c_secondary: #f9f7dc;
 $c_white: #fff;
 $c_black: #111;
 $c_gray_dark: #333;
@@ -21,6 +22,7 @@ $op_default: 0.5;
 // Zインデックス
 $z_float: 10;
 $z_fixed: 100;
+$z_header: 101;
 
 // 影
 $shadow_float:
@@ -32,13 +34,14 @@ $shadow_float:
 $radius_default: 4px;
 $radius_lg: 10px;
 
+// フォントファミリー
+$ff_default: YakuHanJP, 'Noto Sans JP', sans-serif,;
+$ff_en: 'Oswald', sans-serif;
 
 
 
 
 $c_primary_bg_light: #e8f1f7;
-// $c_secondary: #343434;
-// $c_secondary_dark: #000;
 $c_accent: #cc0000;
 // $c_accent_dark: #d07011;
 // $c_caution: #ca0000;
@@ -54,9 +57,6 @@ $c_border_light: #e6ecf4;
 
 $grad_primary: linear-gradient(to bottom right, #215fc3, $c_primary);
 
-// フォントファミリー
-// $ff_default: 'Noto Sans JP', sans-serif;
-$ff_default: 'メイリオ', 'Meiryo', sans-serif;
 
 
 // デュレーション

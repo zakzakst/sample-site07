@@ -39,17 +39,18 @@
 {# 「gulp-htmlmin」での圧縮が効かなかったため、元の記述をVScode側で圧縮しておく #}
 {# <script>
   const loaderEl = document.getElementById('js-loader');
-  if (!loaderEl) return;
-  document.documentElement.style.overflow = 'hidden';
-  setTimeout(() => {
-    const loaderElDisplay = document.defaultView.getComputedStyle(loaderEl, null).display;
-    if (loaderElDisplay === 'flex') {
-      loaderEl.style.display = 'none';
-      document.documentElement.style.overflow = null;
-    }
-  }, 10000);
+  if (loaderEl) {
+    document.documentElement.style.overflow = 'hidden';
+    setTimeout(() => {
+      const loaderElDisplay = document.defaultView.getComputedStyle(loaderEl, null).display;
+      if (loaderElDisplay === 'flex') {
+        loaderEl.style.display = 'none';
+        document.documentElement.style.overflow = null;
+      }
+    }, 10000);
+  }
 </script> #}
 
 <!-- ▼▼▼ ページローダーJS ▼▼▼ -->
-<script>const loaderEl=document.getElementById('js-loader');if (!loaderEl) return;document.documentElement.style.overflow='hidden';setTimeout(()=>{const loaderElDisplay=document.defaultView.getComputedStyle(loaderEl,null).display;if (loaderElDisplay==='flex'){loaderEl.style.display='none';document.documentElement.style.overflow=null}},10000);</script>
+<script>const loaderEl=document.getElementById('js-loader');if(loaderEl){document.documentElement.style.overflow='hidden';setTimeout(()=>{const loaderElDisplay=document.defaultView.getComputedStyle(loaderEl,null).display;if(loaderElDisplay==='flex'){loaderEl.style.display='none';document.documentElement.style.overflow=null}},10000)}</script>
 <!-- ▲▲▲ ページローダーJS ▲▲▲ -->

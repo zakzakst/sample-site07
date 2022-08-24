@@ -1,3 +1,43 @@
+{% set HEADER_ITEMS = [
+  {
+    href: '#',
+    label: 'LINK 01'
+  },
+  {
+    href: '#',
+    label: 'LINK 02'
+  },
+  {
+    href: '#',
+    label: 'LINK 03'
+  },
+  {
+    href: '#',
+    label: 'LINK 04'
+  },
+  {
+    href: '#',
+    label: 'LINK 05'
+  }
+] %}
+
 <!-- ▼▼▼ ヘッダー ▼▼▼ -->
-header
+<header class="header">
+  <div class="header-button__wrapper js-fix-content">
+    <a href="#" id="js-header-button" class="header-button">
+      <div class="header-button__bar">
+        <div class="header-button__bar-item"></div>
+        <div class="header-button__bar-item"></div>
+        <div class="header-button__bar-item"></div>
+      </div>
+    </a>
+  </div>
+  <div id="js-header-menu" class="header-menu js-fix-content">
+    <ul class="header-menu__items">
+      {% for ITEM in HEADER_ITEMS %}
+        <li><a href="{{ ITEM.href }}" class="header-menu__item">{{ ITEM.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>
 <!-- ▲▲▲ ヘッダー ▲▲▲ -->
