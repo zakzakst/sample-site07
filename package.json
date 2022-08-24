@@ -66,6 +66,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "gsap": "^3.11.0",
     "reset-css": "^5.0.1"
   }
 }
