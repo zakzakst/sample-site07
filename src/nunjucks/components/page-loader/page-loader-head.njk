@@ -1,4 +1,4 @@
-<!-- ▼▼▼ ページローダー ▼▼▼ -->
+<!-- ▼▼▼ ページローダーCSS ▼▼▼ -->
 <style>
 .page-loader {
   position: fixed;
@@ -61,6 +61,7 @@
   }
 }
 </style>
+<!-- ▲▲▲ ページローダーCSS ▲▲▲ -->
 
 {# 「gulp-htmlmin」での圧縮が効かなかったため、元の記述をVScode側で圧縮しておく #}
 {# <script>
@@ -74,5 +75,6 @@
   }, 10000);
 </script> #}
 
+<!-- ▼▼▼ ページローダーJS ▼▼▼ -->
 <script>document.documentElement.style.overflow = 'hidden';setTimeout(() => {const docDisplay = document.getElementById('js-page-loader').style.display;if (!docDisplay === 'display') {docDisplay = 'none';document.documentElement.style.overflow = null;}}, 10000);</script>
-<!-- ▲▲▲ ページローダー ▲▲▲ -->
+<!-- ▲▲▲ ページローダーJS ▲▲▲ -->

@@ -64,5 +64,8 @@
     "webpack": "^5.69.1",
     "webpack-cli": "^4.10.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "reset-css": "^5.0.1"
   }
 }
