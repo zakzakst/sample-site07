@@ -10,7 +10,7 @@ const browsersyncConf = {
   server: {
     baseDir: './dist',
   },
-  startPath: 'map.html',
+  // startPath: 'map.html',
 };
 
 /**

@@ -20,7 +20,7 @@
 }
 
 @mixin HoverOp() {
-  transition: opacity v.$d_default;
+  transition: opacity v.$duration_default v.$ease_default;
   &:hover {
     opacity: v.$op_default;
   }

@@ -1,8 +1,22 @@
 // 定数
 $SITE_ROOT: '';
-// $SITE_ROOT: 'project/202208-calmo/';
 
 // 色
+$c_white: #fff;
+$c_gray_dark: #333;
+
+// デュレーション
+$duration_default: 0.5s;
+$duration_fast: 0.3s;
+
+// イージング
+$ease_default: cubic-bezier(0.61, 1, 0.88, 1);
+
+// 透明
+$op_default: 0.5;
+
+
+
 $c_primary: #0047ba;
 // $c_primary_bg: #fff3e5;
 $c_primary_light: #66a1d8;
@@ -15,7 +29,6 @@ $c_accent: #cc0000;
 // $c_caution: #ca0000;
 // $c_caution_bg: #ffefef;
 $c_not_active: #e4e7eb;
-$c_white: #fff;
 $c_black: #272a34;
 $c_gray: #687891;
 $c_gray_light: #f5f5f5;
