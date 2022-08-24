@@ -1,0 +1,37 @@
+{% set FOOTER_ITEMS = [
+  {
+    href: '#',
+    label: 'リンク01'
+  },
+  {
+    href: '#',
+    label: 'リンク02'
+  },
+  {
+    href: '#',
+    label: 'リンク03'
+  },
+  {
+    href: '#',
+    label: 'リンク04'
+  },
+  {
+    href: '#',
+    label: 'リンク05'
+  }
+] %}
+
+<!-- ▼▼▼ フッター ▼▼▼ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner section">
+      <ul class="footer__links">
+        {% for ITEM in FOOTER_ITEMS %}
+          <li><a href="{{ ITEM.href }}" class="footer__link">{{ ITEM.label }}</a></li>
+        {% endfor %}
+      </ul>
+      <p class="footer__copy">Copyright ©XXXXX. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- ▲▲▲ フッター ▲▲▲ -->
