@@ -1,0 +1,102 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".contact";
+
+#{ $BLOCK_NAME } {
+  &__link {
+    position: relative;
+    display: block;
+    color: g.$c_white;
+    text-align: center;
+    background: g.$c_primary;
+    &:hover {
+      color: g.$c_white;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: g.$c_primary_dark;
+      transition: transform g.$duration_fast g.$ease_default;
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    padding: 60px 0;
+    @include g.Mq(md) {
+      padding: 135px 0;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16px;
+    font-family: g.$ff_en;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    @include g.Mq(md) {
+      margin-bottom: 25px;
+      font-size: 50px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    @include g.Mq(md) {
+      font-size: 17px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    border: 1px solid g.$c_white;
+    border-radius: 50%;
+    @include g.Mq(md) {
+      width: 41px;
+      height: 41px;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      bottom: 0;
+      left: -50%;
+      display: block;
+      height: 1px;
+      margin: auto;
+      content: '';
+      background: g.$c_white;
+      transition: transform g.$duration_fast g.$ease_default;
+      @include g.Mq(md) {
+        transform: translateX(-10px);
+      }
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: translateX(0);
+      }
+    }
+  }
+}
