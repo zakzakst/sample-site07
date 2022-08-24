@@ -1,0 +1,36 @@
+@use "../../global" as g;
+
+$BLOCK_NAME: ".top-access";
+
+#{ $BLOCK_NAME } {
+  padding: 32px 0;
+  @include g.Mq(md) {
+    padding: 48px 0;
+  }
+
+  &__inner {
+    display: grid;
+    gap: 24px;
+    @include g.Mq(md) {
+      grid-template-columns: 7fr 4fr;
+      gap: 10%;
+    }
+  }
+
+  &__lead {
+    @include g.Mq(md) {
+      order: 2;
+    }
+  }
+
+  &__content {
+    @include g.Mq(md) {
+      order: 1;
+    }
+  }
+
+  &__map {
+    margin-top: 36px;
+    filter: grayscale(1);
+  }
+}
