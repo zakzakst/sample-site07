@@ -12,12 +12,13 @@
 {% endblock %}
 
 {% block PAGE_CONTENT %}
-  {% include 'sections/top/hero.njk' %}
+  {# {% include 'sections/top/hero.njk' %} #}
+  {% include 'sections/top/faq.njk' %}
   {# <div style="height: 2000px;"></div> #}
 {% endblock %}
 
 {% block PAGE_FOOT %}
 <!-- ▼▼▼ 読み込みファイル（ページ専用） ▼▼▼ -->
-{# <script src="/{{ CONSTANTS.SITE_ROOT }}js/top.js"></script> #}
+<script src="/{{ CONSTANTS.SITE_ROOT }}js/top.js"></script>
 <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ -->
 {% endblock %}
