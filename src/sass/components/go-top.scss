@@ -1,0 +1,32 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".go-top";
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  right: 12px;
+  bottom: 0;
+  z-index: g.$z_float;
+  box-shadow: g.$shadow_float;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 16px 4px 12px;
+    font-size: 14px;
+    color: g.$c_white;
+    background: g.$c_primary;
+    border-top-left-radius: g.$radius_default;
+    border-top-right-radius: g.$radius_default;
+    transition: all g.$duration_fast g.$ease_default;
+    &:hover {
+      color: g.$c_white;
+      background: g.$c_primary_dark;
+    }
+  }
+
+  &__icon {
+    margin: 0 4px 2px 0;
+  }
+}

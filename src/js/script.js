@@ -15,3 +15,10 @@ import { Header } from './modules/header';
   const header = new Header();
   header.init();
 })();
+
+// トップへ戻るスクリプトの実行
+import { GoTop } from './modules/go-top';
+(() => {
+  const goTop = new GoTop();
+  goTop.init();
+})();

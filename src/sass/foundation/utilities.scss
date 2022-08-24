@@ -54,252 +54,252 @@ $padding_names: (
   // }
 }
 
-// セクション
-.section {
-  padding: 52px 0;
-  overflow: hidden;
-}
-
-.bg-section {
-  overflow: hidden;
-  background: g.$c_primary_bg_light;
-  &__content {
-    padding: 24px 0;
-  }
-  @include g.Mq(md) {
-    background: none;
-    &__content {
-      padding: 52px 0;
-      position: relative;
-      &::before {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 136px;
-        width: 100vw;
-        content: '';
-        background: g.$c_primary_bg_light;
-        z-index: -1;
-      }
-    }
-  }
-}
-
-// 見出し
-.heading-1 {
-  font-weight: bold;
-  font-size: 18px;
-  @include g.Mq(md) {
-    font-size: 26px;
-  }
-}
-
-.heading-2 {
-  & > span {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 2;
-    background: linear-gradient(transparent 95%, g.$c_primary 95%);
-    @include g.Mq(md) {
-      font-size: 22px;
-    }
-  }
-}
-
-.heading-3 {
-  & > span {
-    position: relative;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 6px 0 2px 48px;
-    border-bottom: 2px solid g.$c_primary_light;
-    &::before,
-    &::after {
-      position: absolute;
-      content: '';
-      display: block;
-      border-radius: 9999px;
-    }
-    &::before {
-      left: 0;
-      top: 0;
-      z-index: 1;
-      width: 30px;
-      height: 30px;
-      border: 2px solid g.$c_primary;
-    }
-    &::after {
-      left: 22px;
-      top: 12px;
-      width: 18px;
-      height: 18px;
-      z-index: 2;
-      background: g.$c_primary_light;
-    }
-    @include g.Mq(md) {
-      font-size: 26px;
-      border-bottom-width: 4px;
-      padding: 16px 0 2px 75px;
-      &::before {
-        left: 0;
-        top: 0;
-        width: 50px;
-        height: 50px;
-        border-width: 4px;
-      }
-      &::after {
-        left: 36px;
-        top: 22px;
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-  &.--no-border {
-    & > span {
-      color: g.$c_primary;
-      border: none;
-      padding-bottom: 0;
-    }
-  }
-}
-
-// リスト
-.list {
-  &__item {
-    font-size: 12px;
-    padding: 8px 0;
-    font-weight: bold;
-    position: relative;
-    padding-left: 24px;
-    line-height: 1.4;
-    & + & {
-      border-top: 1px solid g.$c_border;
-    }
-    & > b {
-      font-size: 14px;
-      color: g.$c_primary;
-    }
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      bottom: 0;
-      left: 0;
-      display: block;
-      width: 14px;
-      height: 14px;
-      margin: auto;
-      background: url(/#{g.$SITE_ROOT}img/common/list_icon_check.png) center;
-      background-size: contain;
-    }
-    @include g.Mq(md) {
-      font-size: 16px;
-      padding-left: 32px;
-      & > b {
-        font-size: 20px;
-      }
-      &::before {
-        width: 20px;
-        height: 20px;
-      }
-    }
-  }
-}
-
-// 画像
-.img {
-  & > img {
-    width: 100%;
-  }
-}
-
-// // グリッド
-// $grid_gap: 12px;
-
-// .row {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin: calc($grid_gap / -2);
-//   & > [class^="col-"] {
-//     flex-shrink: 0;
-//     padding: calc($grid_gap / 2);
-//   }
+// // セクション
+// .section {
+//   padding: 52px 0;
+//   overflow: hidden;
 // }
 
-// @for $i from 1 through 12 {
-//   // デバイスサイズの指定なし
-//   .col-#{$i} {
-//     width: calc(100% / 12 * $i);
+// .bg-section {
+//   overflow: hidden;
+//   background: g.$c_primary_bg_light;
+//   &__content {
+//     padding: 24px 0;
 //   }
-//   // デバイスサイズの指定あり
-//   @each $break_point_key, $break_point in g.$break_points {
-//     .col-#{$break_point_key}-#{$i} {
-//       width: 100%;
-//       @media screen and (min-width: #{$break_point}) {
-//         width: calc(100% / 12 * $i);
+//   @include g.Mq(md) {
+//     background: none;
+//     &__content {
+//       padding: 52px 0;
+//       position: relative;
+//       &::before {
+//         position: absolute;
+//         top: 0;
+//         bottom: 0;
+//         right: 136px;
+//         width: 100vw;
+//         content: '';
+//         background: g.$c_primary_bg_light;
+//         z-index: -1;
 //       }
 //     }
 //   }
 // }
 
-// // 画面固定
-// html.--window-fixed {
-//   overflow-y: scroll;
-//   & body {
-//     position: fixed;
-//     right: 0;
-//     left: 0;
+// // 見出し
+// .heading-1 {
+//   font-weight: bold;
+//   font-size: 18px;
+//   @include g.Mq(md) {
+//     font-size: 26px;
 //   }
 // }
 
-// ディスプレイ
-$display_names: none, block, flex, inline;
+// .heading-2 {
+//   & > span {
+//     font-size: 16px;
+//     font-weight: bold;
+//     line-height: 2;
+//     background: linear-gradient(transparent 95%, g.$c_primary 95%);
+//     @include g.Mq(md) {
+//       font-size: 22px;
+//     }
+//   }
+// }
 
-@each $display_name in $display_names {
-  .d-#{$display_name} {
-    display: #{$display_name} !important;
-  }
-  @each $break_point_key, $break_point in g.$break_points {
-    .d-#{$break_point_key}-#{$display_name} {
-      @media screen and (min-width: #{$break_point}) {
-        display: #{$display_name} !important;
-      }
-    }
-  }
-}
+// .heading-3 {
+//   & > span {
+//     position: relative;
+//     display: inline-block;
+//     font-weight: bold;
+//     font-size: 18px;
+//     padding: 6px 0 2px 48px;
+//     border-bottom: 2px solid g.$c_primary_light;
+//     &::before,
+//     &::after {
+//       position: absolute;
+//       content: '';
+//       display: block;
+//       border-radius: 9999px;
+//     }
+//     &::before {
+//       left: 0;
+//       top: 0;
+//       z-index: 1;
+//       width: 30px;
+//       height: 30px;
+//       border: 2px solid g.$c_primary;
+//     }
+//     &::after {
+//       left: 22px;
+//       top: 12px;
+//       width: 18px;
+//       height: 18px;
+//       z-index: 2;
+//       background: g.$c_primary_light;
+//     }
+//     @include g.Mq(md) {
+//       font-size: 26px;
+//       border-bottom-width: 4px;
+//       padding: 16px 0 2px 75px;
+//       &::before {
+//         left: 0;
+//         top: 0;
+//         width: 50px;
+//         height: 50px;
+//         border-width: 4px;
+//       }
+//       &::after {
+//         left: 36px;
+//         top: 22px;
+//         width: 30px;
+//         height: 30px;
+//       }
+//     }
+//   }
+//   &.--no-border {
+//     & > span {
+//       color: g.$c_primary;
+//       border: none;
+//       padding-bottom: 0;
+//     }
+//   }
+// }
 
-// テキスト
-$align_names: left, right, center;
+// // リスト
+// .list {
+//   &__item {
+//     font-size: 12px;
+//     padding: 8px 0;
+//     font-weight: bold;
+//     position: relative;
+//     padding-left: 24px;
+//     line-height: 1.4;
+//     & + & {
+//       border-top: 1px solid g.$c_border;
+//     }
+//     & > b {
+//       font-size: 14px;
+//       color: g.$c_primary;
+//     }
+//     &::before {
+//       position: absolute;
+//       content: '';
+//       top: 0;
+//       bottom: 0;
+//       left: 0;
+//       display: block;
+//       width: 14px;
+//       height: 14px;
+//       margin: auto;
+//       background: url(/#{g.$SITE_ROOT}img/common/list_icon_check.png) center;
+//       background-size: contain;
+//     }
+//     @include g.Mq(md) {
+//       font-size: 16px;
+//       padding-left: 32px;
+//       & > b {
+//         font-size: 20px;
+//       }
+//       &::before {
+//         width: 20px;
+//         height: 20px;
+//       }
+//     }
+//   }
+// }
 
-@each $align_name in $align_names {
-  .text-#{$align_name} {
-    text-align: #{$align_name} !important;
-  }
-  @each $break_point_key, $break_point in g.$break_points {
-    .text-#{$break_point_key}-#{$align_name} {
-      @media screen and (min-width: #{$break_point}) {
-        text-align: #{$align_name} !important;
-      }
-    }
-  }
-}
+// // 画像
+// .img {
+//   & > img {
+//     width: 100%;
+//   }
+// }
 
-.text-bold {
-  font-weight: bold !important;
-}
+// // // グリッド
+// // $grid_gap: 12px;
 
-// 色
-.text-primary {
-  color: g.$c_primary !important;
-}
-.text-accent {
-  color: g.$c_accent !important;
-}
-.bg-primary-light {
-  background: g.$c_primary_bg_light;
-}
-.bg-grid {
-  background: url(/#{g.$SITE_ROOT}img/common/bg_grid.png) center;
-}
+// // .row {
+// //   display: flex;
+// //   flex-wrap: wrap;
+// //   margin: calc($grid_gap / -2);
+// //   & > [class^="col-"] {
+// //     flex-shrink: 0;
+// //     padding: calc($grid_gap / 2);
+// //   }
+// // }
+
+// // @for $i from 1 through 12 {
+// //   // デバイスサイズの指定なし
+// //   .col-#{$i} {
+// //     width: calc(100% / 12 * $i);
+// //   }
+// //   // デバイスサイズの指定あり
+// //   @each $break_point_key, $break_point in g.$break_points {
+// //     .col-#{$break_point_key}-#{$i} {
+// //       width: 100%;
+// //       @media screen and (min-width: #{$break_point}) {
+// //         width: calc(100% / 12 * $i);
+// //       }
+// //     }
+// //   }
+// // }
+
+// // // 画面固定
+// // html.--window-fixed {
+// //   overflow-y: scroll;
+// //   & body {
+// //     position: fixed;
+// //     right: 0;
+// //     left: 0;
+// //   }
+// // }
+
+// // ディスプレイ
+// $display_names: none, block, flex, inline;
+
+// @each $display_name in $display_names {
+//   .d-#{$display_name} {
+//     display: #{$display_name} !important;
+//   }
+//   @each $break_point_key, $break_point in g.$break_points {
+//     .d-#{$break_point_key}-#{$display_name} {
+//       @media screen and (min-width: #{$break_point}) {
+//         display: #{$display_name} !important;
+//       }
+//     }
+//   }
+// }
+
+// // テキスト
+// $align_names: left, right, center;
+
+// @each $align_name in $align_names {
+//   .text-#{$align_name} {
+//     text-align: #{$align_name} !important;
+//   }
+//   @each $break_point_key, $break_point in g.$break_points {
+//     .text-#{$break_point_key}-#{$align_name} {
+//       @media screen and (min-width: #{$break_point}) {
+//         text-align: #{$align_name} !important;
+//       }
+//     }
+//   }
+// }
+
+// .text-bold {
+//   font-weight: bold !important;
+// }
+
+// // 色
+// .text-primary {
+//   color: g.$c_primary !important;
+// }
+// .text-accent {
+//   color: g.$c_accent !important;
+// }
+// .bg-primary-light {
+//   background: g.$c_primary_bg_light;
+// }
+// .bg-grid {
+//   background: url(/#{g.$SITE_ROOT}img/common/bg_grid.png) center;
+// }
