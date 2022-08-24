@@ -5,10 +5,8 @@ const { src, dest } = require('gulp');
 const plumber = require('gulp-plumber');
 const sassGlob = require('gulp-sass-glob-use-forward');
 const sass = require('gulp-sass')(require('sass'));
-const Fiber = require('fibers');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-// const combineMQ = require('postcss-combine-media-query');
 const stylelint = require('stylelint');
 
 /**
@@ -19,11 +17,9 @@ const dist = './dist/css';
 // const dist = './wordpress-theme/css';
 const sassConf = {
   outputStyle: 'compressed',
-  fiber: Fiber,
 };
 const postcssPlugin = [
   autoprefixer(),
-  // combineMQ(),
   stylelint({
     fix: true,
   }),
