@@ -1,5 +1,5 @@
-{%- import '../../components/lead.njk' as LEAD -%}
-{%- import '../../components/info-list.njk' as INFO_LIST -%}
+{%- from '../../components/lead.njk' import default as LEAD -%}
+{%- from '../../components/info-list.njk' import default as INFO_LIST -%}
 {% set INFO_LIST_ITEMS = [
   {
     term: '項目名1',
@@ -28,14 +28,14 @@
   <section class="container js-scroll-anim">
     <div class="top-access__inner">
       <div class="top-access__lead">
-        {{ LEAD.default(
+        {{ LEAD(
           heading='アクセス',
           shoulder='ACCESS',
           text='テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
         ) }}
       </div>
       <div class="top-access__content">
-        {{ INFO_LIST.default(INFO_LIST_ITEMS) }}
+        {{ INFO_LIST(INFO_LIST_ITEMS) }}
       </div>
     </div>
     <div class="top-access__map">
