@@ -12,10 +12,12 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.6;
+  color: g.$c_text;
 }
 
 a {
   text-decoration: none;
+  color: g.$c_text;
 }
 
 button {

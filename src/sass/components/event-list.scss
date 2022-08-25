@@ -1,0 +1,67 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".event-list";
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  padding-bottom: 24px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: g.$c_gray_light;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: g.$c_primary;
+    border-radius: 4px;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: 240px;
+    margin-left: 16px;
+    scroll-snap-align: start;
+    &:first-child {
+      margin-left: 0;
+    }
+    & > a {
+      display: block;
+      height: 100%;
+      @include g.HoverOp();
+    }
+  }
+
+  &__item-head {
+    position: relative;
+    & > img {
+      width: 100%;
+    }
+    & > span {
+      position: absolute;
+      bottom: -10px;
+      display: block;
+      width: 90px;
+      height: 20px;
+      font-size: 12px;
+      line-height: 18px;
+      color: g.$c_white;
+      text-align: center;
+      background: g.$c_black;
+    }
+  }
+  &__item-body {
+    padding-top: 20px;
+  }
+  &__item-title {
+    font-weight: bold;
+    line-height: 1.4;
+    color: g.$c_primary;
+  }
+  &__item-text {
+    padding-top: 8px;
+    font-size: 12px;
+  }
+}

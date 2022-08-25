@@ -1,0 +1,20 @@
+@use "../../global" as g;
+
+$BLOCK_NAME: ".top-event";
+
+#{ $BLOCK_NAME } {
+  padding: 32px 0;
+  @include g.Mq(md) {
+    padding: 48px 0;
+  }
+
+  &__inner {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(1, 100%);
+    @include g.Mq(md) {
+      grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+      gap: 10%;
+    }
+  }
+}

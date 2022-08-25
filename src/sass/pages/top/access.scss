@@ -11,8 +11,9 @@ $BLOCK_NAME: ".top-access";
   &__inner {
     display: grid;
     gap: 24px;
+    grid-template-columns: repeat(1, 100%);
     @include g.Mq(md) {
-      grid-template-columns: 7fr 4fr;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
       gap: 10%;
     }
   }
