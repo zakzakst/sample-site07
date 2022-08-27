@@ -16,7 +16,10 @@ $BLOCK_NAME: ".top-news";
     grid-template-columns: repeat(1, 100%);
     @include g.Mq(md) {
       grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
-      gap: 10%;
+      grid-template-areas:
+        "content lead"
+        "content button";
+      gap: 24px 10%;
     }
     &::before {
       position: absolute;
@@ -38,13 +41,19 @@ $BLOCK_NAME: ".top-news";
 
   &__lead {
     @include g.Mq(md) {
-      order: 2;
+      grid-area: lead;
     }
   }
 
   &__content {
     @include g.Mq(md) {
-      order: 1;
+      grid-area: content;
+    }
+  }
+
+  &__button {
+    @include g.Mq(md) {
+      grid-area: button;
     }
   }
 }

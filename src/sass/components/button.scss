@@ -1,0 +1,68 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".button";
+
+#{ $BLOCK_NAME } {
+  &__wrapper {
+    display: flex;
+    &.is-align-right {
+      justify-content: flex-end;
+    }
+  }
+
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  font-size: 16px;
+  color: g.$c_white;
+  text-align: center;
+  background: g.$c_accent;
+  border-radius: 9999px;
+  transition: background-color g.$duration_fast g.$ease_default;
+  @include g.Mq(md) {
+    max-width: 240px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: auto;
+    content: '';
+    background: g.$c_white;
+    transition: left g.$duration_fast g.$ease_default;
+  }
+
+  &::after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: repeating-linear-gradient(
+      -45deg,
+      g.$c_white,
+      g.$c_white 3px,
+      g.$c_border 3px,
+      g.$c_border 6px
+    );
+    border-radius: 9999px;
+  }
+
+  &:hover {
+    color: g.$c_white;
+    background: g.$c_black;
+    &::before {
+      left: 16px;
+    }
+  }
+}

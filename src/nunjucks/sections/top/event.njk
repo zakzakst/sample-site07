@@ -1,3 +1,4 @@
+{%- from '../../components/button.njk' import default as BUTTON -%}
 {%- from '../../components/lead.njk' import default as LEAD -%}
 {%- from '../../components/event-list.njk' import default as EVENT_LIST -%}
 {% set EVENT_LIST_ITEMS = [
@@ -45,6 +46,13 @@
       </div>
       <div class="top-event__content">
         {{ EVENT_LIST(EVENT_LIST_ITEMS) }}
+      </div>
+      <div class="top-event__button">
+        {{ BUTTON({
+          href: '#',
+          text: 'イベント一覧',
+          align: 'right'
+        }) }}
       </div>
     </div>
   </section>

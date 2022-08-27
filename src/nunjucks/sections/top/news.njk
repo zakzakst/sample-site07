@@ -1,3 +1,4 @@
+{%- from '../../components/button.njk' import default as BUTTON -%}
 {%- from '../../components/lead.njk' import default as LEAD -%}
 {%- from '../../components/news-list.njk' import default as NEWS_LIST -%}
 {% set NEWS_LIST_ITEMS = [
@@ -30,6 +31,12 @@
       </div>
       <div class="top-news__content">
         {{ NEWS_LIST(NEWS_LIST_ITEMS) }}
+      </div>
+      <div class="top-news__button">
+        {{ BUTTON({
+          href: '#',
+          text: 'ニュース一覧'
+        }) }}
       </div>
     </div>
   </section>
