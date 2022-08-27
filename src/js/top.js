@@ -1,4 +1,4 @@
-console.log('top');
+'use strict';
 
 // FAQスクリプトの実行
 import { TopFaq } from './modules/top/faq';

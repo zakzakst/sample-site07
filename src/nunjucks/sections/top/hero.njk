@@ -1,14 +1,14 @@
-{% set heroMvItems = [
-  { src: 'img/top/hero_01.jpg' },
-  { src: 'img/top/hero_02.jpg' },
-  { src: 'img/top/hero_03.jpg' }
+{% set HERO_ITEMS = [
+  { src: 'img/top/hero/mv_01.jpg' },
+  { src: 'img/top/hero/mv_02.jpg' },
+  { src: 'img/top/hero/mv_03.jpg' }
 ] -%}
 
 <!-- ▼▼▼ ヒーロー ▼▼▼ -->
-<div class="container">
-  <section class="section">
-    <div class="top-hero columns is-relative" id="js-top-hero">
-      <div class="column is-5">
+<div class="top-hero__wrapper">
+  <div class="container">
+    <div class="top-hero" id="js-top-hero">
+      <div class="top-hero__content">
         <h1 class="top-hero__title">
           <span class="top-hero__title-line"><span>ここに</span></span>
           <span class="top-hero__title-line"><span>タイトルが</span></span>
@@ -16,18 +16,18 @@
         </h1>
         <p class="top-hero__lead"><span>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span></p>
       </div>
-      <div class="top-hero__mv-wrapper column is-7">
+      <div class="top-hero__mv-wrapper">
         <div class="top-hero__mv">
-          {% for item in heroMvItems %}
+          {% for ITEM in HERO_ITEMS %}
             <div class="top-hero__mv-item">
               <div class="top-hero__mv-img-container">
-                <div class="top-hero__mv-img" data-img-src="{{ item.src }}"></div>
+                <div class="top-hero__mv-img" data-img-src="{{ ITEM.src }}"></div>
               </div>
             </div>
           {% endfor %}
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 <!-- ▲▲▲ ヒーロー ▲▲▲ -->

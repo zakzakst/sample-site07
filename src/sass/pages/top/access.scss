@@ -4,6 +4,7 @@ $BLOCK_NAME: ".top-access";
 
 #{ $BLOCK_NAME } {
   padding: 32px 0;
+  overflow: hidden;
   @include g.Mq(md) {
     padding: 48px 0;
   }

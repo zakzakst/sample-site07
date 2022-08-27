@@ -1,13 +1,17 @@
 'use strict';
 
+// トップヒーロースクリプトの実行
 // ローダースクリプトの実行
+import { TopHero } from './modules/top/hero';
 import { Loader } from './modules/loader';
-() => {
+(() => {
+  const topHero = new TopHero();
+  topHero.init();
   const loader = new Loader(() => {
-    console.log('ロード完了');
+    topHero.startAnim();
   });
   loader.init();
-};
+})();
 
 // ヘッダースクリプトの実行
 import { Header } from './modules/header';

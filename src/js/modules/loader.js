@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 
 export class Loader {
   constructor(callback) {
-    this.el = document.getElementById('js-page-loader');
+    this.el = document.getElementById('js-loader');
     this.bgEl = document.querySelector('.loader__bg');
     this.contentEl = document.querySelector('.loader__content');
     this.callback = callback;
