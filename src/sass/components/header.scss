@@ -1,6 +1,7 @@
 @use "../global" as g;
 
 $BLOCK_NAME: ".header";
+
 #{ $BLOCK_NAME } {
   position: relative;
   z-index: g.$z_header;

@@ -1,4 +1,5 @@
 {% extends 'layouts/has-aside.njk' %}
+{%- from 'components/hero.njk' import default as HERO -%}
 {% set PAGE_DATA = {
   TITLE: 'ニュース一覧ページ',
   DESCRIPTION: 'ニュース一覧ページの概要',
@@ -12,7 +13,10 @@
 {% endblock %}
 
 {% block PAGE_HERO %}
-  hero
+  {{ HERO({
+    title: 'ニュース一覧',
+    img: 'https://picsum.photos/id/249/1200/400'
+  }) }}
 {% endblock %}
 
 {% block PAGE_CONTENT %}
