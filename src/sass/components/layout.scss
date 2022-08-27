@@ -1,0 +1,11 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".layout";
+
+#{ $BLOCK_NAME } {
+  &__main {
+  }
+
+  &__aside {
+  }
+}
