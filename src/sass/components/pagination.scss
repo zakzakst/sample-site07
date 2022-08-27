@@ -1,0 +1,44 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".pagination";
+
+#{ $BLOCK_NAME } {
+  margin-top: 24px;
+
+  & > .wp-pagenavi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 36px);
+    gap: 8px;
+    justify-content: center;
+
+    & > .pages {
+      display: none;
+    }
+
+    & > a,
+    & > span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 36px;
+      border: 1px solid g.$c_border;
+      border-radius: g.$radius_default;
+    }
+  
+    & > a {
+      transition: all g.$duration_default g.$ease_default;
+      &:hover {
+        background: g.$c_primary;
+        color: g.$c_white;
+        border-color: g.$c_primary;
+      }
+    }
+  
+    & > span.current {
+      background: g.$c_primary;
+      color: g.$c_white;
+      border-color: g.$c_primary;
+    }
+  }
+}

@@ -13,26 +13,37 @@
 </head>
 <body>
   {# ▼▼▼ ページローダー ▼▼▼ #}
-  {% include '../components/page-loader/page-loader.njk' %}
+  {# {% include '../components/page-loader/page-loader.njk' %} #}
   {# ▲▲▲ ページローダー ▲▲▲ #}
 
   {# ▼▼▼ ヘッダー ▼▼▼ #}
   {% include '../components/header.njk' %}
   {# ▲▲▲ ヘッダー ▲▲▲ #}
 
-  <div class="layout has-aside">
+  {# ▼▼▼ ヒーロー ▼▼▼ #}
+  {% block PAGE_HERO %}
+  {% endblock %}
+  {# ▲▲▲ ヒーロー ▲▲▲ #}
+
+  <div class="container layout has-aside">
     <main class="layout__main">
       {# ▼▼▼ ページ内容 ▼▼▼ #}
       {% block PAGE_CONTENT %}
       {% endblock %}
       {# ▲▲▲ ページ内容 ▲▲▲ #}
     </main>
-    <aside class="layout__aside">サイドバー</aside>
+    <aside class="layout__aside">
+      {% include '../components/sidebar.njk' %}
+    </aside>
   </div>
 
   {# ▼▼▼ お問い合わせ ▼▼▼ #}
   {% include '../components/contact.njk' %}
   {# ▲▲▲ お問い合わせ ▲▲▲ #}
+
+  {# ▼▼▼ パンくず ▼▼▼ #}
+  {% include '../components/breadcrumb.njk' %}
+  {# ▲▲▲ パンくず ▲▲▲ #}
 
   {# ▼▼▼ フッター ▼▼▼ #}
   {% include '../components/footer.njk' %}

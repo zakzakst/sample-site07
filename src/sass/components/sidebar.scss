@@ -1,0 +1,39 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".sidebar";
+
+#{ $BLOCK_NAME } {
+  padding: 16px;
+  background: g.$c_secondary;
+  border-radius: g.$radius_lg;
+
+  &__item {
+    border-top: 1px dotted g.$c_border;
+    &:first-child {
+      border: none;
+    }
+  }
+
+  &__item-link {
+    position: relative;
+    display: block;
+    padding: 8px 8px 8px 24px;
+    @include g.HoverOp();
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 6px;
+      content: '';
+      width: 0;
+      height: 0;
+      display: block;
+      box-sizing: content-box;
+      border-width: 4px 6px;
+      border-style: solid;
+      border-color: transparent;
+      border-left-color: g.$c_primary;
+      margin: auto;
+    }
+  }
+}

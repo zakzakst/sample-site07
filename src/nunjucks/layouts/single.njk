@@ -20,6 +20,11 @@
   {% include '../components/header.njk' %}
   {# ▲▲▲ ヘッダー ▲▲▲ #}
 
+  {# ▼▼▼ ヒーロー ▼▼▼ #}
+  {% block PAGE_HERO %}
+  {% endblock %}
+  {# ▲▲▲ ヒーロー ▲▲▲ #}
+
   <div class="layout">
     <main class="layout__main">
       {# ▼▼▼ ページ内容 ▼▼▼ #}
@@ -32,6 +37,10 @@
   {# ▼▼▼ お問い合わせ ▼▼▼ #}
   {% include '../components/contact.njk' %}
   {# ▲▲▲ お問い合わせ ▲▲▲ #}
+
+  {# ▼▼▼ パンくず ▼▼▼ #}
+  {% include '../components/breadcrumb.njk' %}
+  {# ▲▲▲ パンくず ▲▲▲ #}
 
   {# ▼▼▼ フッター ▼▼▼ #}
   {% include '../components/footer.njk' %}

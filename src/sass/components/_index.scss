@@ -1,3 +1,4 @@
+@use "breadcrumb";
 @use "button";
 @use "contact";
 @use "event-list";
@@ -8,3 +9,5 @@
 @use "layout";
 @use "lead";
 @use "news-list";
+@use "pagination";
+@use "sidebar";

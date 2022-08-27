@@ -3,9 +3,17 @@
 $BLOCK_NAME: ".layout";
 
 #{ $BLOCK_NAME } {
-  &__main {
+  padding: 48px 0;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: repeat(1, 100%);
+  @include g.Mq(md) {
+    grid-template-columns: auto 240px;
   }
 
-  &__aside {
-  }
+  // &__main {
+  // }
+
+  // &__aside {
+  // }
 }

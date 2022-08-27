@@ -1,0 +1,24 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".breadcrumb";
+
+#{ $BLOCK_NAME } {
+  color: g.$c_white;
+  font-size: 12px;
+  padding: 4px 0 6px;
+  background: g.$c_gray_dark;
+  border-bottom: 1px solid g.$c_border;
+
+  & > .container > span {
+    display: inline-block;
+    margin: 0 4px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  & a {
+    color: g.$c_white;
+    @include g.HoverOp();
+  }
+}

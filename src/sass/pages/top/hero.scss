@@ -55,6 +55,7 @@ $scale_mv: 1.2;
       overflow: hidden;
       color: g.$c_white;
       background: g.$c_primary;
+      border-radius: g.$radius_lg;
       &::after {
         position: absolute;
         top: 0;

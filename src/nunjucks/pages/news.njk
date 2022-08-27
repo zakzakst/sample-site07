@@ -11,8 +11,13 @@
 <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ --> #}
 {% endblock %}
 
+{% block PAGE_HERO %}
+  hero
+{% endblock %}
+
 {% block PAGE_CONTENT %}
-  news
+  {% include 'sections/news/content.njk' %}
+  {% include 'components/pagination.njk' %}
 {% endblock %}
 
 {% block PAGE_FOOT %}
