@@ -5,5 +5,41 @@ $BLOCK_NAME: ".form";
 #{ $BLOCK_NAME } {
   &__field {
     display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(1, 100%);
+    @include g.Mq(sm) {
+      grid-template-columns: 1fr 3fr;
+      gap: 12px;
+    }
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    font-weight: bold;
+    @include g.Mq(sm) {
+      text-align: right;
+    }
+  }
+
+  &__input,
+  &__textarea,
+  &__select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid g.$c_border;
+    border-radius: g.$radius_default;
+    transition: all g.$duration_default g.$ease_default;
+    &:focus {
+      background: g.$c_gray_bg;
+      outline: none;
+      box-shadow: g.$shadow_default;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
   }
 }

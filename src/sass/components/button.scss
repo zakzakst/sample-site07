@@ -8,6 +8,9 @@ $BLOCK_NAME: ".button";
     &.is-align-right {
       justify-content: flex-end;
     }
+    &.is-align-center {
+      justify-content: center;
+    }
   }
 
   position: relative;
