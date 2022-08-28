@@ -10,7 +10,7 @@ const browsersyncConf = {
   server: {
     baseDir: './dist',
   },
-  startPath: 'news.html',
+  startPath: 'event.html',
 };
 
 /**

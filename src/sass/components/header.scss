@@ -112,6 +112,7 @@ $BLOCK_NAME_MENU: ".header-menu";
     letter-spacing: 2px;
     transition: all g.$duration_default g.$ease_default;
     transform: translateY(100%);
+    text-align: center;
     @include g.Mq(md) {
       font-size: 40px;
     }
