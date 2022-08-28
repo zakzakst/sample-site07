@@ -13,7 +13,7 @@
 </head>
 <body>
   {# ▼▼▼ ページローダー ▼▼▼ #}
-  {# {% include '../components/page-loader/page-loader.njk' %} #}
+  {% include '../components/page-loader/page-loader.njk' %}
   {# ▲▲▲ ページローダー ▲▲▲ #}
 
   {# ▼▼▼ ヘッダー ▼▼▼ #}
@@ -25,15 +25,13 @@
   {% endblock %}
   {# ▲▲▲ ヒーロー ▲▲▲ #}
 
-  <div class="container is-single">
-    <div class="layout is-single">
-      <main class="layout__main">
-        {# ▼▼▼ ページ内容 ▼▼▼ #}
-        {% block PAGE_CONTENT %}
-        {% endblock %}
-        {# ▲▲▲ ページ内容 ▲▲▲ #}
-      </main>
-    </div>
+  <div class="container layout is-single">
+    <main class="layout__main">
+      {# ▼▼▼ ページ内容 ▼▼▼ #}
+      {% block PAGE_CONTENT %}
+      {% endblock %}
+      {# ▲▲▲ ページ内容 ▲▲▲ #}
+    </main>
   </div>
 
   {# ▼▼▼ お問い合わせ ▼▼▼ #}

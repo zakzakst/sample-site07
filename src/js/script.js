@@ -6,9 +6,11 @@ import { TopHero } from './modules/top/hero';
 import { Loader } from './modules/loader';
 (() => {
   const topHero = new TopHero();
-  topHero.init();
+  const isExistTopHero = topHero.init();
   const loader = new Loader(() => {
-    topHero.startAnim();
+    if (isExistTopHero) {
+      topHero.startAnim();
+    }
   });
   loader.init();
 })();

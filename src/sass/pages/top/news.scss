@@ -9,6 +9,16 @@ $BLOCK_NAME: ".top-news";
     padding: 48px 0;
   }
 
+  & .js-scroll-anim {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all g.$duration_default g.$ease_default;
+    &.is-animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   &__inner {
     position: relative;
     display: grid;

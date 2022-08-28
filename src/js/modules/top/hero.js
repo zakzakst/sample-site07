@@ -16,8 +16,9 @@ export class TopHero {
    */
   init() {
     // 要素が存在しない場合、処理を終了
-    if (!this.heroEl) return;
+    if (!this.heroEl) return false;
     this.mvInit();
+    return true;
   }
 
   /**

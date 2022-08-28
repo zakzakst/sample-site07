@@ -16,15 +16,9 @@ $BLOCK_NAME: ".top-point";
   }
 
   color: g.$c_white;
-  // opacity: 0;
   transition: all g.$duration_default g.$ease_default;
-  // transform: translateY(24px);
   display: grid;
   gap: 24px;
-  &.is-animated {
-    opacity: 1;
-    transform: translateY(0);
-  }
   & + & {
     margin-top: 48px;
   }
@@ -39,6 +33,16 @@ $BLOCK_NAME: ".top-point";
       & #{ $BLOCK_NAME }__img {
         order: 1;
       }
+    }
+  }
+
+  &.js-scroll-anim {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all g.$duration_default g.$ease_default;
+    &.is-animated {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
