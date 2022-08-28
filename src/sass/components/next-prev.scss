@@ -1,0 +1,43 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".next-prev";
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  margin-top: 24px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 1px;
+    background: g.$c_border;
+    margin: auto;
+  }
+  
+  &__link {
+    width: 50%;
+    border: 1px solid g.$c_border;
+    padding: 12px;
+    background: g.$c_white;
+    transition: all g.$duration_default g.$ease_default;
+    &:hover {
+      background: g.$c_primary;
+      color: g.$c_white;
+    }
+    &.is-prev {
+      border-right: none;
+      border-top-left-radius: g.$radius_default;
+      border-bottom-left-radius: g.$radius_default;
+    }
+    &.is-next {
+      border-left: none;
+      border-top-right-radius: g.$radius_default;
+      border-bottom-right-radius: g.$radius_default;
+    }
+  }
+}
