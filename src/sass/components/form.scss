@@ -1,0 +1,9 @@
+@use "../global" as g;
+
+$BLOCK_NAME: ".form";
+
+#{ $BLOCK_NAME } {
+  &__field {
+    display: grid;
+  }
+}

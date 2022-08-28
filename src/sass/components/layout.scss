@@ -4,16 +4,18 @@ $BLOCK_NAME: ".layout";
 
 #{ $BLOCK_NAME } {
   padding: 48px 0;
-  display: grid;
-  gap: 36px;
-  grid-template-columns: repeat(1, 100%);
-  @include g.Mq(md) {
-    grid-template-columns: auto 240px;
+  &:not(.is-single) {
+    display: grid;
+    gap: 36px;
+    grid-template-columns: repeat(1, 100%);
+    @include g.Mq(md) {
+      grid-template-columns: auto 240px;
+    }
+  
+    // &__main {
+    // }
+  
+    // &__aside {
+    // }
   }
-
-  // &__main {
-  // }
-
-  // &__aside {
-  // }
 }
