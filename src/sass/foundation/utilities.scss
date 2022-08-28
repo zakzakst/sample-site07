@@ -47,11 +47,11 @@ $padding_names: (
 .container {
   position: relative;
   @include g.Container();
-  // &.--single {
-  //   @include g.Mq(md) {
-  //     max-width: map.get(g.$width_containers, md);
-  //   }
-  // }
+  &.is-single {
+    @include g.Mq(md) {
+      max-width: map.get(g.$width_containers, md) !important;
+    }
+  }
 }
 
 // // セクション

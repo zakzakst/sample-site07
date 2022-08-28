@@ -1,6 +1,7 @@
 {% extends 'layouts/single.njk' %}
+{%- from 'components/hero.njk' import default as HERO -%}
 {% set PAGE_DATA = {
-  TITLE: '問い合わせページ',
+  TITLE: 'お問い合わせページ',
   DESCRIPTION: '問い合わせページの概要',
   NAV: 'contact'
 } %}
@@ -11,8 +12,15 @@
 <!-- ▲▲▲ 読み込みファイル（ページ専用） ▲▲▲ --> #}
 {% endblock %}
 
+{% block PAGE_HERO %}
+  {{ HERO({
+    title: 'お問い合わせ',
+    img: 'https://picsum.photos/id/249/1200/400'
+  }) }}
+{% endblock %}
+
 {% block PAGE_CONTENT %}
-  contact
+  {% include 'sections/contact/content.njk' %}
 {% endblock %}
 
 {% block PAGE_FOOT %}
