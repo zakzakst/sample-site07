@@ -7,12 +7,12 @@
     // include('components/head/meta.php');
     // include('components/head/ogp.php');
     // include('components/head/schema.php');
-    // include('components/page-loader/page-loader-head.php');
     // カスタムフィールドのタイトル・ディスクリプションを設定
+    get_template_part('partials/page-loader-head');
     wp_head();
   ?>
 </head>
-<body class="layout__body" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 <?php
-  // include('components/page-loader/page-loader.php');
+  get_template_part('partials/page-loader');
   get_template_part('partials/header');
