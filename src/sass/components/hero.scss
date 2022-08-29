@@ -4,17 +4,18 @@ $BLOCK_NAME: ".hero";
 
 #{ $BLOCK_NAME } {
   &__wrapper {
+    position: relative;
     padding-top: 24px;
     &::before {
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
-      background: g.$grad_primary;
-      height: 90px;
-      display: block;
-      content: '';
+      left: 0;
       z-index: -1;
+      display: block;
+      height: 90px;
+      content: '';
+      background: g.$grad_primary;
     }
   }
 
@@ -27,19 +28,19 @@ $BLOCK_NAME: ".hero";
 
   &__title {
     position: absolute;
-    left: 0;
     right: 0;
     bottom: 0;
-    margin: auto;
-    background: rgba(g.$c_white, 0.75);
-    color: g.$c_black;
-    padding: 12px 16px 16px;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
+    left: 0;
     z-index: 1;
-    border-bottom-left-radius: g.$radius_lg;
+    padding: 12px 16px 16px;
+    margin: auto;
+    font-size: 16px;
+    font-weight: bold;
+    color: g.$c_black;
+    text-align: center;
+    background: rgba(g.$c_white, 0.75);
     border-bottom-right-radius: g.$radius_lg;
+    border-bottom-left-radius: g.$radius_lg;
   }
 
   &__bg {

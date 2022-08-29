@@ -5,8 +5,8 @@ $BLOCK_NAME: ".form";
 #{ $BLOCK_NAME } {
   &__field {
     display: grid;
-    gap: 4px;
     grid-template-columns: repeat(1, 100%);
+    gap: 4px;
     @include g.Mq(sm) {
       grid-template-columns: 1fr 3fr;
       gap: 12px;

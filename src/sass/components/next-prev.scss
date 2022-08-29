@@ -3,31 +3,31 @@
 $BLOCK_NAME: ".next-prev";
 
 #{ $BLOCK_NAME } {
+  position: relative;
   display: flex;
   margin-top: 24px;
-  position: relative;
   &::before {
     position: absolute;
-    content: '';
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
     display: block;
     width: 1px;
-    background: g.$c_border;
     margin: auto;
+    content: '';
+    background: g.$c_border;
   }
   
   &__link {
     width: 50%;
-    border: 1px solid g.$c_border;
     padding: 12px;
     background: g.$c_white;
+    border: 1px solid g.$c_border;
     transition: all g.$duration_default g.$ease_default;
     &:hover {
-      background: g.$c_primary;
       color: g.$c_white;
+      background: g.$c_primary;
     }
     &.is-prev {
       border-right: none;
@@ -35,10 +35,10 @@ $BLOCK_NAME: ".next-prev";
       border-bottom-left-radius: g.$radius_default;
     }
     &.is-next {
+      text-align: right;
       border-left: none;
       border-top-right-radius: g.$radius_default;
       border-bottom-right-radius: g.$radius_default;
-      text-align: right;
     }
   }
 }

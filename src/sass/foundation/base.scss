@@ -8,19 +8,19 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: g.$ff_default;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.6;
   color: g.$c_text;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 a {
-  text-decoration: none;
   color: g.$c_text;
+  text-decoration: none;
 }
 
 button {

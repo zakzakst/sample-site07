@@ -10,8 +10,8 @@ $BLOCK_NAME: ".top-event";
 
   & .js-scroll-anim {
     opacity: 0;
-    transform: translateY(24px);
     transition: all g.$duration_default g.$ease_default;
+    transform: translateY(24px);
     &.is-animated {
       opacity: 1;
       transform: translateY(0);
@@ -20,13 +20,13 @@ $BLOCK_NAME: ".top-event";
 
   &__inner {
     display: grid;
-    gap: 24px;
     grid-template-columns: repeat(1, 100%);
+    gap: 24px;
     @include g.Mq(md) {
-      grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
       grid-template-areas:
         "lead content"
         "button content";
+      grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
       gap: 24px 10%;
     }
   }

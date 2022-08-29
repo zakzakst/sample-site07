@@ -24,16 +24,16 @@ $BLOCK_NAME: ".sidebar";
       top: 0;
       bottom: 0;
       left: 6px;
-      content: '';
+      box-sizing: content-box;
+      display: block;
       width: 0;
       height: 0;
-      display: block;
-      box-sizing: content-box;
-      border-width: 4px 6px;
-      border-style: solid;
-      border-color: transparent;
-      border-left-color: g.$c_primary;
       margin: auto;
+      content: '';
+      border-color: transparent;
+      border-style: solid;
+      border-width: 4px 6px;
+      border-left-color: g.$c_primary;
     }
   }
 }

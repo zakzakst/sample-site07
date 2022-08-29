@@ -109,10 +109,10 @@ $BLOCK_NAME_MENU: ".header-menu";
     font-family: g.$ff_en;
     font-size: 24px;
     color: g.$c_white;
+    text-align: center;
     letter-spacing: 2px;
     transition: all g.$duration_default g.$ease_default;
     transform: translateY(100%);
-    text-align: center;
     @include g.Mq(md) {
       font-size: 40px;
     }

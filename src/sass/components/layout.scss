@@ -3,13 +3,13 @@
 $BLOCK_NAME: ".layout";
 
 #{ $BLOCK_NAME } {
-  padding: 48px 0;
   flex-basis: auto;
   flex-grow: 1;
+  padding: 48px 0;
   &:not(.is-single) {
     display: grid;
-    gap: 36px;
     grid-template-columns: repeat(1, 100%);
+    gap: 36px;
     @include g.Mq(md) {
       grid-template-columns: auto 240px;
     }

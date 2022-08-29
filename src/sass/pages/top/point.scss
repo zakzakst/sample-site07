@@ -14,11 +14,11 @@ $BLOCK_NAME: ".top-point";
       padding: 48px 0;
     }
   }
+  display: grid;
+  gap: 24px;
 
   color: g.$c_white;
   transition: all g.$duration_default g.$ease_default;
-  display: grid;
-  gap: 24px;
   & + & {
     margin-top: 48px;
   }
@@ -38,8 +38,8 @@ $BLOCK_NAME: ".top-point";
 
   &.js-scroll-anim {
     opacity: 0;
-    transform: translateY(24px);
     transition: all g.$duration_default g.$ease_default;
+    transform: translateY(24px);
     &.is-animated {
       opacity: 1;
       transform: translateY(0);

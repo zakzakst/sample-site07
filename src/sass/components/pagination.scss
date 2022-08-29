@@ -29,15 +29,15 @@ $BLOCK_NAME: ".pagination";
     & > a {
       transition: all g.$duration_default g.$ease_default;
       &:hover {
-        background: g.$c_primary;
         color: g.$c_white;
+        background: g.$c_primary;
         border-color: g.$c_primary;
       }
     }
   
     & > span.current {
-      background: g.$c_primary;
       color: g.$c_white;
+      background: g.$c_primary;
       border-color: g.$c_primary;
     }
   }
