@@ -252,4 +252,106 @@
 </div>
 <!-- ▲▲▲ アクセス ▲▲▲ -->
 
+<!-- ▼▼▼ FAQ ▼▼▼ -->
+<?php
+  $FAQ_ITEMS = array(
+    array(
+      'categoryLabel' => '○○について',
+      'contents' => array(
+        array(
+          'question' => '○○について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+        array(
+          'question' => '○○について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+        array(
+          'question' => '○○について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+        array(
+          'question' => '○○について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+      ),
+    ),
+    array(
+      'categoryLabel' => '××について',
+      'contents' => array(
+        array(
+          'question' => '××について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+        array(
+          'question' => '××について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+        array(
+          'question' => '××について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+      ),
+    ),
+    array(
+      'categoryLabel' => '□□について',
+      'contents' => array(
+        array(
+          'question' => '□□について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+        array(
+          'question' => '□□について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+        array(
+          'question' => '□□について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+        array(
+          'question' => '□□について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+      ),
+    ),
+    array(
+      'categoryLabel' => '△△について',
+      'contents' => array(
+        array(
+          'question' => '△△について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+        array(
+          'question' => '△△について質問が入ります。',
+          'answer' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+        ),
+      ),
+    ),
+  );
+?>
+<div class="top-faq__wrapper">
+  <div class="container">
+    <div class="top-faq">
+      <ul class="top-faq__tab">
+        <?php foreach ($FAQ_ITEMS as $INDEX => $ITEM) : ?>
+          <li class="top-faq__tab-item" data-target-index="<?php echo $INDEX; ?>"><?php echo $ITEM['categoryLabel']; ?></li>
+        <?php endforeach; ?>
+      </ul>
+      <div class="top-faq__contents">
+        <?php foreach ($FAQ_ITEMS as $ITEM) : ?>
+          <div class="top-faq__content">
+            <?php foreach ($ITEM['contents'] as $CONTENT) : ?>
+              <div class="top-faq__content-item">
+                <h3 class="top-faq__content-question"><?php echo $CONTENT['question']; ?></h3>
+                <p class="top-faq__content-answer"><?php echo $CONTENT['answer']; ?></p>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ▲▲▲ FAQ ▲▲▲ -->
+
 <?php get_footer();
