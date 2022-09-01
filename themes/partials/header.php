@@ -1,22 +1,5 @@
 <?php
-  $HEADER_ITEMS = array(
-    array(
-      'href' => '#',
-      'label' => 'TOP',
-    ),
-    array(
-      'href' => '#',
-      'label' => 'NEWS',
-    ),
-    array(
-      'href' => '#',
-      'label' => 'EVENT',
-    ),
-    array(
-      'href' => '#',
-      'label' => 'CONTACT',
-    ),
-  );
+  $HEADER_ITEMS = GET_MENU_ITEMS('header_links');
 ?>
 
 <!-- ▼▼▼ ヘッダー ▼▼▼ -->
@@ -34,7 +17,7 @@
     <ul class="header-menu__items">
       <?php foreach ($HEADER_ITEMS as $ITEM) : ?>
         <li>
-          <a href="<?php echo $ITEM['href']; ?>" class="header-menu__item"><?php echo $ITEM['label']; ?></a>
+          <a href="<?php echo $ITEM->url; ?>" class="header-menu__item"><?php echo $ITEM->title; ?></a>
         </li>
       <?php endforeach; ?>
     </ul>
