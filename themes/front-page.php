@@ -153,5 +153,45 @@
 </div>
 <!-- ▲▲▲ イベント ▲▲▲ -->
 
+<!-- ▼▼▼ ポイント ▼▼▼ -->
+<?php
+  $POINT_ITEMS = array(
+    array(
+      'shoulder' => 'POINT 01',
+      'heading' => '見出しが入ります',
+      'text' => '<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p><p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>',
+      'img' => 'img_01.jpg',
+    ),
+    array(
+      'shoulder' => 'POINT 02',
+      'heading' => '見出しが入ります',
+      'text' => '<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p><p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>',
+      'img' => 'img_02.jpg',
+    ),
+    array(
+      'shoulder' => 'POINT 03',
+      'heading' => '見出しが入ります',
+      'text' => '<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p><p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>',
+      'img' => 'img_03.jpg',
+    ),
+  );
+?>
+<div class="top-point__wrapper">
+  <div class="container">
+    <?php foreach ($POINT_ITEMS as $ITEM) : ?>
+      <div class="top-point js-scroll-anim">
+        <div class="top-point__content">
+          <p class="top-point__shoulder"><span><?php echo $ITEM['shoulder']; ?></span></p>
+          <h3 class="top-point__heading"><?php echo $ITEM['heading']; ?></h3>
+          <div class="top-point__text"><?php echo $ITEM['text']; ?></div>
+        </div>
+        <div class="top-point__img">
+          <img src="<?php echo get_stylesheet_directory_uri() . '/img/top/point/' . $ITEM['img']; ?>" alt="">
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+</div>
+<!-- ▲▲▲ ポイント ▲▲▲ -->
 
 <?php get_footer();
