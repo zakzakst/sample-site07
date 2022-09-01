@@ -42,3 +42,21 @@ function enqueue_scripts() {
   );
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
+
+// TOPページ用ファイルの読み込み設定
+function enqueue_files_top() {
+  if (is_front_page()) {
+    wp_enqueue_style(
+      'style-top',
+      get_stylesheet_directory_uri() . '/css/top.css',
+    );
+    wp_enqueue_script(
+      'script-top',
+      get_stylesheet_directory_uri() . '/js/top.js',
+      array(),
+      '',
+      true,
+    );
+  }
+}
+add_action('wp_enqueue_scripts', 'enqueue_files_top');
