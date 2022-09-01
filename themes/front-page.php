@@ -82,7 +82,7 @@
       </div>
       <div class="top-news__button">
         <?php get_template_part('partials/button', null, array(
-          'href' => '#',
+          'href' => home_url('/news/'),
           'text' => 'ニュース一覧',
           'align' => '',
         )); ?>
