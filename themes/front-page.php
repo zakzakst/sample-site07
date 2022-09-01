@@ -41,4 +41,54 @@
 </div>
 <!-- ▲▲▲ ヒーロー ▲▲▲ -->
 
+<!-- ▼▼▼ ニュース ▼▼▼ -->
+<?php
+  $NEWS_LIST_ITEMS = array(
+    array(
+      'href' => '#',
+      'category' => 'お知らせ',
+      'date' => '2021.01.01',
+      'text' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    ),
+    array(
+      'href' => '#',
+      'category' => 'コラム',
+      'date' => '2021.01.02',
+      'text' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    ),
+    array(
+      'href' => '#',
+      'category' => 'ブログ',
+      'date' => '2021.01.03',
+      'text' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    ),
+  );
+?>
+<div class="top-news">
+  <section class="container js-scroll-anim">
+    <div class="top-news__inner">
+      <div class="top-news__lead">
+        <?php get_template_part('partials/lead', null, array(
+          'heading' => 'ニュース',
+          'shoulder' => 'NEWS',
+          'text' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。',
+          'align' => '',
+        )); ?>
+      </div>
+      <div class="top-news__content">
+        <?php get_template_part('partials/news-list', null, array(
+          'items' => $NEWS_LIST_ITEMS,
+        )); ?>
+      </div>
+      <div class="top-news__button">
+        <?php get_template_part('partials/button', null, array(
+          'href' => '#',
+          'text' => 'ニュース一覧',
+          'align' => '',
+        )); ?>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- ▲▲▲ ニュース ▲▲▲ -->
 <?php get_footer();
