@@ -1,22 +1,5 @@
 <?php
-  $FOOTER_ITEMS = array(
-    array(
-      'href' => '#',
-      'label' => 'トップ',
-    ),
-    array(
-      'href' => '#',
-      'label' => 'ニュース一覧',
-    ),
-    array(
-      'href' => '#',
-      'label' => 'イベント一覧',
-    ),
-    array(
-      'href' => '#',
-      'label' => 'お問い合わせ',
-    ),
-  );
+  $FOOTER_ITEMS = GET_MENU_ITEMS('footer_links');
 ?>
 
 <!-- ▼▼▼ フッター ▼▼▼ -->
@@ -25,7 +8,7 @@
     <div class="footer__inner">
       <ul class="footer__links">
         <?php foreach ($FOOTER_ITEMS as $ITEM) : ?>
-          <li><a href="<?php echo $ITEM['href']; ?>" class="footer__link"><?php echo $ITEM['label']; ?></a></li>
+          <li><a href="<?php echo $ITEM->url; ?>" class="footer__link"><?php echo $ITEM->title; ?></a></li>
         <?php endforeach; ?>
       </ul>
       <p class="footer__copy">Copyright &copy;XXXXX. All Rights Reserved.</p>
