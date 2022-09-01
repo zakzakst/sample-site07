@@ -194,4 +194,62 @@
 </div>
 <!-- ▲▲▲ ポイント ▲▲▲ -->
 
+<!-- ▼▼▼ アクセス ▼▼▼ -->
+<?php
+  $INFO_LIST_ITEMS = array(
+    array(
+      'term' => '項目名1',
+      'description' => 'テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    ),
+    array(
+      'term' => '項目名2',
+      'description' => 'テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    ),
+    array(
+      'term' => '項目名3',
+      'description' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    ),
+    array(
+      'term' => '項目名4',
+      'description' => 'テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    ),
+    array(
+      'term' => '項目名5',
+      'description' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+    ),
+  );
+?>
+<div class="top-access">
+  <section class="container js-scroll-anim">
+    <div class="top-access__inner">
+      <div class="top-access__lead">
+        <?php get_template_part('partials/lead', null, array(
+          'heading' => 'アクセス',
+          'shoulder' => 'ACCESS',
+          'text' => 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。',
+          'align' => '',
+        )); ?>
+      </div>
+      <div class="top-access__content">
+        <?php get_template_part('partials/info-list', null, array(
+          'items' => $INFO_LIST_ITEMS,
+        )); ?>
+      </div>
+    </div>
+    <div class="top-access__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.0459159529737!2d139.80315461529614!3d35.74967618017841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e4fa6644e8d%3A0x6bc4e612ab55d171!2z5YyX5Y2D5L2P6aeF!5e0!3m2!1sja!2sjp!4v1611569782550!5m2!1sja!2sjp"
+        width="100%"
+        height="300"
+        frameborder="0"
+        style="border:0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </div>
+  </section>
+</div>
+<!-- ▲▲▲ アクセス ▲▲▲ -->
+
 <?php get_footer();
