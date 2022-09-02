@@ -69,38 +69,6 @@
 <!-- ▲▲▲ ニュース ▲▲▲ -->
 
 <!-- ▼▼▼ イベント ▼▼▼ -->
-<?php
-  $EVENT_LIST_ITEMS = array(
-    array(
-      'href' => '#',
-      'img' => 'https://picsum.photos/id/10/480/240',
-      'date' => '2021.01.01',
-      'title' => 'イベント名が入ります。イベント名が入ります。',
-      'text' => 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。',
-    ),
-    array(
-      'href' => '#',
-      'img' => 'https://picsum.photos/id/1000/480/240',
-      'date' => '2021.01.02',
-      'title' => 'イベント名が入ります。イベント名が入ります。',
-      'text' => 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。',
-    ),
-    array(
-      'href' => '#',
-      'img' => 'https://picsum.photos/id/1011/480/240',
-      'date' => '2021.01.03',
-      'title' => 'イベント名が入ります。イベント名が入ります。',
-      'text' => 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。',
-    ),
-    array(
-      'href' => '#',
-      'img' => 'https://picsum.photos/id/1016/480/240',
-      'date' => '2021.01.04',
-      'title' => 'イベント名が入ります。イベント名が入ります。',
-      'text' => 'イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。<br>イベント概要が入ります。イベント概要が入ります。イベント概要が入ります。',
-    ),
-  );
-?>
 <div class="top-event">
   <section class="container js-scroll-anim">
     <div class="top-event__inner">
@@ -117,7 +85,7 @@
       </div>
       <div class="top-event__button">
         <?php get_template_part('partials/button', null, array(
-          'href' => '#',
+          'href' => home_url('/event/'),
           'text' => 'イベント一覧',
           'align' => 'right',
         )); ?>
