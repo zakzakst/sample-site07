@@ -11,7 +11,7 @@
 <div class="container layout has-aside">
   <main class="layout__main">
     <?php if (have_posts()) : ?>
-      <ul class="event-list">
+      <ul class="event-list-lg">
         <?php while (have_posts()) : the_post(); ?>
           <?php get_template_part('partials/event-list-item', null); ?>
         <?php endwhile; ?>

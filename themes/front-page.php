@@ -113,9 +113,7 @@
         )); ?>
       </div>
       <div class="top-event__content">
-        <?php get_template_part('partials/event-list', null, array(
-          'items' => $EVENT_LIST_ITEMS,
-        )); ?>
+        <?php get_template_part('partials/event-list2', null, array('page' => 5)); ?>
       </div>
       <div class="top-event__button">
         <?php get_template_part('partials/button', null, array(
