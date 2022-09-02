@@ -24,6 +24,7 @@
           get_template_part('partials/info-list-event');
         }
       ?>
+      <?php get_template_part('partials/prev-next-links'); ?>
     </div>
   </main>
   <aside class="layout__aside">
