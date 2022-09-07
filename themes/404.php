@@ -11,7 +11,8 @@
 <div class="container layout has-aside">
   <main class="layout__main">
     <div class="content">
-      <h2>投稿が見つかりません。</h2>
+      <p>申し訳ございませんが、お探しのページが見つかりませんでした。<br>ページが削除されたか、URLが変更された可能性があります。</p>
+      <?php get_template_part('partials/sitemap'); ?>
     </div>
   </main>
   <aside class="layout__aside">

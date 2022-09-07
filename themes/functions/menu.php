@@ -6,6 +6,7 @@ function add_menus() {
       'header_links' => 'ヘッダーに表示されるナビゲーション',
       'footer_links' => 'フッターに表示されるナビゲーション',
       'side_links' => 'サイドバーに表示されるリンク',
+      'sitemap_links' => 'サイトマップに表示されるリンク',
     ),
   );
 }
