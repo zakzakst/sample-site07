@@ -11,3 +11,12 @@ function theme_setup() {
 }
 
 add_action('after_setup_theme', 'theme_setup');
+
+function change_title_tag( $title ) {
+  // 404ページのタイトルをカスタマイズ
+  if (is_404()) {
+    $title = 'お探しのページは見つかりませんでした';
+  }
+  return $title;
+}
+add_filter('pre_get_document_title', 'change_title_tag');

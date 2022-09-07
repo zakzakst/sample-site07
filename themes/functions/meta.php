@@ -1,6 +1,10 @@
 <?php
 function description() {
   global $post;
+  if (!$post) {
+    printf('<meta name="description" content="%s">', esc_html(get_bloginfo('description')));
+    return;
+  }
   $term = get_post_meta($post->ID, 'description', true);
   if ($term) {
     printf('<meta name="description" content="%s">', esc_html($term));
@@ -12,6 +16,7 @@ add_action('wp_head', 'description');
 
 function custom_css() {
   global $post;
+  if (!$post) return;
   $term = get_post_meta($post->ID, 'customcss', true);
   if ($term) {
     echo '<style>';
