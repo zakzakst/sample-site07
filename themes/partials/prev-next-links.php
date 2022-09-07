@@ -1,4 +1,5 @@
 <!-- ▼▼▼ 前後投稿リンク ▼▼▼ -->
+<!-- TODO: ページがない場合の無効リンク -->
 <div class="next-prev">
   <?php
     $prev_post = get_previous_post();

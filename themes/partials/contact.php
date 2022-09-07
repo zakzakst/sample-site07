@@ -1,6 +1,6 @@
 <!-- ▼▼▼ お問い合わせ ▼▼▼ -->
 <div class="contact">
-  <a href="#" class="contact__link">
+  <a href="<?php echo home_url('/contact/'); ?>" class="contact__link">
     <div class="container">
       <div class="contact__inner">
         <h2 class="contact__heading">CONTACT</h2>
